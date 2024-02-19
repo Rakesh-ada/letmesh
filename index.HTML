@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <style>* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #DED4E8;
+    text-align: center;
+    
+  }
+  
+  header {
+    background-color: #C7395F;
+    color: #E8BA40;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    
+  }
+  nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color:#C7395F; 
+  align-items: center;
+}
+
+nav li {
+	float: center;
+}
+
+nav li a {
+	display: block;
+	color: #E8BA40;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  text-align: center;
+}
+
+nav li a:hover {
+	background-color:#C7395F ;
+}
+
+#gameText {
+      color: #333; /* Set the text color */
+      margin-bottom: 20px; /* Add space below the text */
+    }
+
+#playButton {
+      background-color: #E8BA40; /* Set the background color */
+      color: #C7395F; /* Set the text color */
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px; 
+      margin-top: 10px;
+}
+  
+  .main {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 100px;
+  }
+  
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .profile video {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+  }
+  
+  
+  .social-links {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .social-links li {
+    margin-right: 10px;
+  }
+  
+  .social-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  .social-links a:hover {
+    color: #666;
+  }
+  
+  footer {
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #DED4E8;
+  color: #C7395F;
+  padding: 20px;
+  text-align: center;
+  }
+  
+  /* Media queries */
+  @media screen and (max-width: 600px) {
+    .profile img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  </style>
+</head>
+<body background="background.png">
+  <header>
+   <h1> Let Me Guess Your Mind </h1>
+    <nav>
+			<ul>
+				<li><a href="https://rakesh-ada.github.io/Vote-Now/">Home</a></li>
+				<li><a href="https://rakesh-ada.github.io/MY-PROFILE/">Devloper</a></li>
+				
+			</ul>
+		</nav>
+  </header>
+  <main> 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sequential Text Game</title>
+      <style>
+        /* Add your styles here */
+      </style>
+    </head>
+    <body>
+     <img id="gameImage" src="gif8.gif" alt="Game Image">
+      <h1 id="gameText">Hello Senpai Let Me Guess Your Mind.</h1>
+      <button id="playButton" onclick="playGame()">Play Game</button>
+      
+      <script>
+        var step = 0; // to keep track of the current step in the game
+    
+        function playGame() {
+          var gameTextElement = document.getElementById("gameText");
+          var gameImageElement = document.getElementById("gameImage");
+          var playButton = document.getElementById("playButton");
+    
+          // Implement your game logic based on the current step
+          switch (step) {
+          
+            case 0:
+              gameTextElement.innerHTML = "Think an Indian Girl Name. ";
+              gameImageElement.src = "gif1.gif";
+              break;
+            case 1:
+              gameTextElement.innerHTML = "Now Think a Country Name from Last Letter of Indian Girl Name.";
+              gameImageElement.src = "gif9.gif";
+              break;
+            case 2:
+              gameTextElement.innerHTML = "Now Think a Fruit Name from Last Letter of Country Name.";
+              gameImageElement.src = "gif10.gif";
+              break;
+            case 3:
+              gameTextElement.innerHTML = "Now Think a Land Animal Name from Last Letter of Fruit Name.";
+              gameImageElement.src = "gif11.gif";
+              break;
+            case 4:
+              gameTextElement.innerHTML = "You are Thinking of Animal Named.........";
+              gameImageElement.src = "gif12.gif";
+              break; 
+            case 5:
+              gameTextElement.innerHTML = "ELEPHANT 🐘";
+              gameImageElement.src = "e.gif";
+              break;
+              
+            // Add more cases as needed
+    
+            default:
+              gameImageElement.src = "gif13.gif";
+              gameTextElement.innerHTML = "Thanks for playing!";
+              playButton.style.display = "none"; // Hide the button after the game ends
+              break;
+          }
+    
+          // Increment the step for the next interaction
+          step++;
+        }
+      </script>
+    
+    </body>
+    </html>
+    
+
+ 
+        
+  </main>
+      <ul class="social-links">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        
+
+      </ul>
+    </section>
+  </main>
+  <footer>
+    
+  </footer>
+</body>
+</html>
